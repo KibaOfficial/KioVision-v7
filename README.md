@@ -18,7 +18,7 @@
 
 # KioVision
 
-![KioVision Preview](https://imgur.com/a/z6o3392)
+![KioVision Preview](https://i.imgur.com/bL2VGI9.jpeg)
 
 </div>
 
