@@ -1,0 +1,138 @@
+/**
+ * @name KioVision
+ * @license Apache-2.0
+ * @author ClearVision Team & KibaOfficial
+ * @version 7.0.0
+ * @description A modified version of the ClearVision Theme based on the v7
+ * @repository https://github.com/KibaOfficial/KioVision-v7
+ * @source https://github.com/ClearVision/ClearVision-v7
+ * @website https://clearvision.github.io
+ * @invite dHaSxn3
+ */
+
+/* Credits to Zerthox for making the original theme. */
+
+/* IMPORT CSS */
+@import url("https://raw.githubusercontent.com/KibaOfficial/KioVision-v7/master/cv7-main.css");
+@import url("https://raw.githubusercontent.com/KibaOfficial/KioVision-v7/master/cv7-vencord.css");
+
+/* SETTINGS */
+:root {
+  /* ACCENT COLORS */
+  --main-color: #751037; /* main accent color (hex, rgb or hsl) */
+  --hover-color: #1e63b3; /* hover accent color (hex, rgb or hsl) */
+  --success-color: #43b581; /* positive accent color (hex, rgb or hsl) */
+  --danger-color: #982929; /* danger accent color (hex, rgb or hsl) */
+
+  /* STATUS COLORS */
+  --online-color: #43b581; /* online status color */
+  --idle-color: #faa61a; /* idle status color */
+  --dnd-color: #982929; /* dnd status color */
+  --streaming-color: #593695; /* streaming status color */
+  --offline-color: #808080; /* offline/invisible status color */
+
+  /* APP BACKGROUND */
+  --background-shading-percent: 100%; /* app background shading amount (0 for complete smoothness) */
+  --background-image: url(https://i.pinimg.com/originals/af/04/2d/af042d6e481e6a43140bb685518905b0.jpg); /* app background image */
+  --background-position: center; /* app background position */
+  --background-size: cover; /* app background size */
+  --background-attachment: fixed; /* app background attachment */
+  --background-filter: saturate(calc(var(--saturation-factor, 1) * 1)); /* app background adjustments */
+
+  /* USER POPOUT BACKGROUND */
+  --user-popout-image: var(--background-image); /* user popout background image */
+  --user-popout-position: var(--background-position); /* user popout position */
+  --user-popout-size: var(--background-size); /* user popout size */
+  --user-popout-attachment: var(--background-attachment); /* user popout background attachment */
+  --user-popout-filter: var(--background-filter); /* user popout background adjustments */
+
+  /* USER MODAL BACKGROUND */
+  --user-modal-image: var(--background-image); /* user modal background image */
+  --user-modal-position: var(--background-position); /* user modal position */
+  --user-modal-size: var(--background-size); /* user modal size */
+  --user-modal-attachment: var(--background-attachment); /* user modal background attachment */
+  --user-modal-filter: var(--background-filter); /* user modal background adjustments */
+
+  /* HOME ICON */
+  --home-icon: url(https://clearvision.github.io/icons/discord.svg); /* home button icon */
+  --home-size: cover; /* home button icon size */
+
+  /* FONTS */
+  --main-font: "gg sans", "Helvetica Neue", Helvetica, Arial, sans-serif; /* main font for app */
+  --code-font: Consolas, "gg mono", "Liberation Mono", Menlo, Courier, monospace; /* font for code blocks */
+
+  /* CHANNEL COLORS */
+  --channel-normal: var(--interactive-text-default); /* channel text color */
+  --channel-muted: var(--interactive-muted); /* muted channel text color */
+  --channel-hover: var(--interactive-text-hover); /* hovered channel text color */
+  --channel-selected: var(--interactive-text-active); /* selected channel text color */
+  --channel-selected-bg: var(--main-color); /* selected channel background */
+  --channel-unread: var(--main-color); /* unread channel text color */
+  --channel-unread-hover: var(--hover-color); /* unread channel hover color */
+
+  /* ACCESSIBILITY */
+  --focus-color: var(--main-color); /* outline when pressing TAB key */
+}
+
+/* THEME SPECIFIC SHADING */
+/* LIGHT THEME */
+:is(.theme-light, .theme-dark .theme-light) {
+  --background-shading: rgba(252, 252, 252, 0.3); /* app background shading color */
+  --card-shading: rgba(252, 252, 252, 0.3); /* cards background shading color */
+  --popout-shading: rgba(252, 252, 252, 0.7); /* popouts background shading color */
+  --modal-shading: rgba(252, 252, 252, 0.5); /* modals background shading color */
+  --input-shading: rgba(0, 0, 0, 0.3); /* inputs background shading color */
+  --normal-text: #36363c; /* text color */
+  --muted-text: #75757e; /* muted text color */
+}
+
+/* ASH THEME (Dark) */
+:is(.theme-dark, .theme-light .theme-dark) {
+  --background-shading: rgba(0, 0, 0, 0.6); /* app background shading color - slightly darker for better contrast */
+  --card-shading: rgba(0, 0, 0, 0.3); /* cards background shading color */
+  --popout-shading: rgba(0, 0, 0, 0.7); /* popouts background shading color */
+  --modal-shading: rgba(0, 0, 0, 0.5); /* modals background shading color */
+  --input-shading: rgba(255, 255, 255, 0.05); /* inputs background shading color */
+  --normal-text: #d8d8db; /* text color */
+  --muted-text: #aeaeb4; /* muted text color */
+}
+
+/* DARKER THEME */
+:is(.theme-darker, .theme-light .theme-darker) {
+  --background-shading: rgba(0, 0, 0, 0.7); /* app background shading color */
+  --card-shading: rgba(0, 0, 0, 0.35); /* cards background shading color */
+  --popout-shading: rgba(0, 0, 0, 0.75); /* popouts background shading color */
+  --modal-shading: rgba(0, 0, 0, 0.55); /* modals background shading color */
+  --input-shading: rgba(255, 255, 255, 0.05); /* inputs background shading color */
+  --normal-text: #fbfbfb; /* text color */
+  --muted-text: #94949c; /* muted text color */
+}
+
+/* ONYX THEME (Midnight) */
+:is(.theme-midnight, .theme-light .theme-midnight) {
+  --background-shading: rgba(0, 0, 0, 0.8); /* app background shading color */
+  --card-shading: rgba(0, 0, 0, 0.4); /* cards background shading color */
+  --popout-shading: rgba(0, 0, 0, 0.8); /* popouts background shading color */
+  --modal-shading: rgba(0, 0, 0, 0.6); /* modals background shading color */
+  --input-shading: rgba(255, 255, 255, 0.05); /* inputs background shading color */
+  --normal-text: #dcdcde; /* text color */
+  --muted-text: #86868e; /* muted text color */
+}
+
+/* KIOVISION CUSTOM ADDITIONS */
+
+/* Custom Theme Branding - Settings Info */
+._2debea61131de3de-info::after {
+  content: "KioVision" " " "7.0.0" !important;
+}
+
+/* Custom Theme Branding - Header (oben links) */
+.visual-refresh:not(.platform-osx) .c38106a3f0c3ca76-leading::before {
+  content: "KioVision" !important;
+}
+
+.visual-refresh:not(.platform-osx) .c38106a3f0c3ca76-leading::after {
+  content: "7.0.0" !important;
+}
+
+/* ADD ADDITIONAL CSS BELOW HERE */
