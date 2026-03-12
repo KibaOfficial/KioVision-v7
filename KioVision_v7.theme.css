@@ -122,17 +122,17 @@
 /* KIOVISION CUSTOM ADDITIONS */
 
 /* Custom Theme Branding - Settings Info */
-._2debea61131de3de-info::after {
-  content: "KioVision" " " "7.0.0" !important;
+.info__2debe::after {
+  content: "KioVision" " " "7.0.1" !important;
 }
 
 /* Custom Theme Branding - Header (oben links) */
-.visual-refresh:not(.platform-osx) .c38106a3f0c3ca76-leading::before {
+:is(.theme-dark, .theme-light):not(.platform-osx) .leading_c38106::before {
   content: "KioVision" !important;
 }
 
-.visual-refresh:not(.platform-osx) .c38106a3f0c3ca76-leading::after {
-  content: "7.0.0" !important;
+:is(.theme-dark, .theme-light):not(.platform-osx) .leading_c38106::after {
+  content: "7.0.1" !important;
 }
 
 /* ADD ADDITIONAL CSS BELOW HERE */
